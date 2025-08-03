@@ -834,7 +834,7 @@ function App() {
             </div>
 
             <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
-              <form className="space-y-6" action="https://formsubmit.co/8b49e71d469dfc28b279d4f6bfd6d310" method="POST">
+              <form className="space-y-6" action="https://formsubmit.co/ingwilmersanchezsaez@gmail.com" method="POST">
               <input type="hidden" name="_captcha" value="false" />
               <input type="hidden" name="_next" value="https://wilmersaz.github.io/wilmersaz/#contact" />
                 <div>
