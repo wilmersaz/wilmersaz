@@ -126,7 +126,7 @@ function App() {
               <a href="https://www.linkedin.com/in/wilmersaz/" className="p-3 bg-slate-800 rounded-full hover:bg-cyan-600 transition-colors hover:scale-110 transform">
                 <Linkedin size={24} />
               </a>
-              <a href="ingwilmersanchezsaez@gmail.com" className="p-3 bg-slate-800 rounded-full hover:bg-teal-600 transition-colors hover:scale-110 transform">
+              <a href="mailto:ingwilmersanchezsaez@gmail.com" className="p-3 bg-slate-800 rounded-full hover:bg-teal-600 transition-colors hover:scale-110 transform">
                 <Mail size={24} />
               </a>
             </div>
