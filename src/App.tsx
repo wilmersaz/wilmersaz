@@ -120,10 +120,10 @@ function App() {
               {t.heroDescription}
             </p>
             <div className="flex justify-center space-x-6 mb-12">
-              <a href="https://github.com/wilmersaz/" className="p-3 bg-slate-800 rounded-full hover:bg-blue-600 transition-colors hover:scale-110 transform">
+              <a href="https://github.com/wilmersaz/" target='_blank' className="p-3 bg-slate-800 rounded-full hover:bg-blue-600 transition-colors hover:scale-110 transform">
                 <Github size={24} />
               </a>
-              <a href="https://www.linkedin.com/in/wilmersaz/" className="p-3 bg-slate-800 rounded-full hover:bg-cyan-600 transition-colors hover:scale-110 transform">
+              <a href="https://www.linkedin.com/in/wilmersaz/" target='_blank' className="p-3 bg-slate-800 rounded-full hover:bg-cyan-600 transition-colors hover:scale-110 transform">
                 <Linkedin size={24} />
               </a>
               <a href="mailto:ingwilmersanchezsaez@gmail.com" className="p-3 bg-slate-800 rounded-full hover:bg-teal-600 transition-colors hover:scale-110 transform">
@@ -820,10 +820,10 @@ function App() {
               <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
                 <h3 className="text-2xl font-bold mb-6 text-white">{t.followMe}</h3>
                 <div className="flex space-x-4">
-                  <a href="https://github.com/wilmersaz/" className="p-3 bg-slate-800 rounded-full hover:bg-blue-600 transition-colors">
+                  <a href="https://github.com/wilmersaz/" target='_blank' className="p-3 bg-slate-800 rounded-full hover:bg-blue-600 transition-colors">
                     <Github size={24} />
                   </a>
-                  <a href="https://www.linkedin.com/in/wilmersanchez/" className="p-3 bg-slate-800 rounded-full hover:bg-cyan-600 transition-colors">
+                  <a href="https://www.linkedin.com/in/wilmersanchez/" target='_blank' className="p-3 bg-slate-800 rounded-full hover:bg-cyan-600 transition-colors">
                     <Linkedin size={24} />
                   </a>
                   <a href="mailto:ingwilmersanchezsaez@gmail.com" className="p-3 bg-slate-800 rounded-full hover:bg-teal-600 transition-colors">
@@ -883,10 +883,10 @@ function App() {
             </div>
             <p className="text-gray-400 mb-6">{t.footerTagline}</p>
             <div className="flex justify-center space-x-6">
-              <a href="https://github.com/wilmersaz/" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="https://github.com/wilmersaz/" target='_blank' className="text-gray-400 hover:text-blue-400 transition-colors">
                 <Github size={24} />
               </a>
-              <a href="https://www.linkedin.com/in/wilmersanchez/" className="text-gray-400 hover:text-teal-400 transition-colors">
+              <a href="https://www.linkedin.com/in/wilmersanchez/" target='_blank' className="text-gray-400 hover:text-teal-400 transition-colors">
                 <Linkedin size={24} />
               </a>
               <a href="mailto:ingwilmersanchezsaez@gmail.com" className="text-gray-400 hover:text-cyan-400 transition-colors">
