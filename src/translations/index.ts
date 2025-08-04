@@ -112,7 +112,7 @@ export const translations: Record<"es" | "en", Translation> = {
 
     // 10. MiJornada
     projectTitle10: "MiJornada",
-    projectDescription10: "Aplicación móvil para la gestión de turnos y horarios laborales, que permite a los empleados registrar su entrada y salida, solicitar permisos y visualizar su historial de asistencia. Facilita la planificación y el control del tiempo laboral.",
+    projectDescription10: "Aplicación web para la gestión de turnos y horarios laborales, que permite a los empleados registrar su entrada y salida, solicitar permisos y visualizar su historial de asistencia. Facilita la planificación y el control del tiempo laboral.",
 
     // 9. Créditos Digitales
     projectTitle9: "Créditos Digitales",
@@ -319,7 +319,7 @@ export const translations: Record<"es" | "en", Translation> = {
 
     // 10. MiJornada
     projectTitle10: "MiJornada",
-    projectDescription10: "Mobile application for shift and work schedule management, allowing employees to record entry and exit, request permissions, and view their attendance history. Facilitates planning and control of work time.",
+    projectDescription10: "Web application for shift and work schedule management, allowing employees to record entry and exit, request permissions, and view their attendance history. Facilitates planning and control of work time.",
 
     // 9. Créditos Digitales
     projectTitle9: "Créditos Digitales",
