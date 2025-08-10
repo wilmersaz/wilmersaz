@@ -60,16 +60,15 @@ function App() {
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
               {['home', 'about', 'skills', 'education', 'certifications', 'portfolio', 'experience', 'contact'].map((item, idx, arr) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item)}
-                className={`capitalize transition-colors hover:text-blue-400 ${
-                activeSection === item ? 'text-blue-400' : 'text-gray-300'
-                } ${idx === arr.length - 1 ? 'mr-[70px]' : ''}`}
-                style={idx === arr.length - 1 ? { marginRight: '70px' } : undefined}
-              >
-                {t[item as keyof typeof t] as string}
-              </button>
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(item)}
+                  className={`capitalize transition-colors hover:text-blue-400 ${activeSection === item ? 'text-blue-400' : 'text-gray-300'
+                    } ${idx === arr.length - 1 ? 'mr-[70px]' : ''}`}
+                  style={idx === arr.length - 1 ? { marginRight: '70px' } : undefined}
+                >
+                  {t[item as keyof typeof t] as string}
+                </button>
               ))}
             </div>
 
@@ -219,7 +218,7 @@ function App() {
               { category: t.backend, skills: ['PHP', 'Laravel', 'C#', '.NET Core', 'Python', 'Visual Basic'], color: 'from-teal-500 to-emerald-500' },
               { category: t.databases, skills: ['MySQL', 'PostgreSQL', 'SQL Server', 'Oracle PL/SQL', 'SQLite'], color: 'from-cyan-500 to-cyan-500' },
               { category: t.toolsCloud, skills: ['Google Cloud Platform', 'Azure DevOps', 'Docker', 'GitHub', 'GitLab', 'Bitbucket', 'Visual Studio Code', 'Sublime Text'], color: 'from-cyan-500 to-blue-500' },
-              { category: t.others, skills: ['Linux Server','Selenium', 'FastAPI', 'VBScript','Postman','EchoAPI', 'MarkDown',  'Advanced Excel'], color: 'from-teal-500 to-cyan-500' },
+              { category: t.others, skills: ['Linux Server', 'Selenium', 'FastAPI', 'VBScript', 'Postman', 'EchoAPI', 'MarkDown', 'Advanced Excel'], color: 'from-teal-500 to-cyan-500' },
             ].map((category, index) => (
               <div key={index} className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 hover:border-blue-500/50 transition-all hover:transform hover:scale-105">
                 <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center mb-6`}>
@@ -327,12 +326,12 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-blue-600 to-teal-600',
                 icon: (
-                <img
-                src="https://img.icons8.com/ios7/200/FFFFFF/google-translate.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
-              ),
+                  <img
+                    src="https://img.icons8.com/ios7/200/FFFFFF/google-translate.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
+                ),
               },
               {
                 title: 'ENGLISH DOES WORK - LEVEL 2',
@@ -342,12 +341,12 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-teal-500 to-cyan-500',
                 icon: (
-                <img
-                src="https://img.icons8.com/ios7/200/FFFFFF/google-translate.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
-              ),
+                  <img
+                    src="https://img.icons8.com/ios7/200/FFFFFF/google-translate.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
+                ),
               },
               {
                 title: 'ENGLISH DOES WORK - LEVEL 1',
@@ -357,12 +356,12 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-teal-500 to-blue-500',
                 icon: (
-                <img
-                src="https://img.icons8.com/ios7/200/FFFFFF/google-translate.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
-              ),
+                  <img
+                    src="https://img.icons8.com/ios7/200/FFFFFF/google-translate.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
+                ),
               },
               {
                 title: 'ENGLISH DOES WORK - LEVEL 4',
@@ -372,12 +371,12 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-teal-500 to-blue-500',
                 icon: (
-                <img
-                src="https://img.icons8.com/ios7/200/FFFFFF/google-translate.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
-              ),
+                  <img
+                    src="https://img.icons8.com/ios7/200/FFFFFF/google-translate.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
+                ),
               },
               {
                 title: 'ENGLISH DOES WORK - LEVEL 3',
@@ -387,12 +386,12 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-cyan-500 to-teal-500',
                 icon: (
-                <img
-                src="https://img.icons8.com/ios7/200/FFFFFF/google-translate.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
-              ),
+                  <img
+                    src="https://img.icons8.com/ios7/200/FFFFFF/google-translate.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
+                ),
               },
               {
                 title: 'Aprende SCRUM',
@@ -402,12 +401,12 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-blue-600 to-teal-600',
                 icon: (
-                <img
-                src="https://img.icons8.com/ios7/200/FFFFFF/google-translate.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
-              ),
+                  <img
+                    src="https://img.icons8.com/ios7/200/FFFFFF/google-translate.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
+                ),
               },
               {
                 title: 'Fundamentos del desarrollo web: Full Stack o Front-End',
@@ -417,12 +416,12 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-blue-600 to-teal-600',
                 icon: (
-                <img
-                src="https://skillmea.cz/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWxoTXpFMk9UUTJZeTAyWm1JMUxUUTVOMll0WW1GalpTMWtOVFZpWWpsaE56UmpZemNHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--a3a1901580816fd47ce864dc5c1172022dfed63e/html.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
-              ),
+                  <img
+                    src="https://skillmea.cz/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWxoTXpFMk9UUTJZeTAyWm1JMUxUUTVOMll0WW1GalpTMWtOVFZpWWpsaE56UmpZemNHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--a3a1901580816fd47ce864dc5c1172022dfed63e/html.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
+                ),
               },
               {
                 title: 'React + Rredux',
@@ -432,11 +431,11 @@ function App() {
                 level: t.levelIntermediate,
                 color: 'from-teal-500 to-cyan-500',
                 icon: (
-                <img
-                src="https://img.icons8.com/ios11/200/FFFFFF/react.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
+                  <img
+                    src="https://img.icons8.com/ios11/200/FFFFFF/react.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
                 )
               },
               {
@@ -447,12 +446,12 @@ function App() {
                 level: t.levelIntermediate,
                 color: 'from-teal-500 to-blue-500',
                 icon: (
-                <img
-                src="https://icon-library.com/images/jquery-icon-png/jquery-icon-png-21.jpg"
-                alt="Language"
-                className="w-8 h-8"
-                />
-              ),
+                  <img
+                    src="https://icon-library.com/images/jquery-icon-png/jquery-icon-png-21.jpg"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
+                ),
               },
               {
                 title: 'Diseño de sitios web con VUE',
@@ -462,11 +461,11 @@ function App() {
                 level: t.levelExpert,
                 color: 'from-teal-500 to-blue-500',
                 icon: (
-                <img
-                src="https://img.icons8.com/win10/512/FFFFFF/vuetify.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
+                  <img
+                    src="https://img.icons8.com/win10/512/FFFFFF/vuetify.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
                 )
               },
               {
@@ -477,11 +476,11 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-cyan-500 to-teal-500',
                 icon: (
-                <img
-                src="https://dba24.com.ar/wp-content/uploads/2023/10/image-30.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
+                  <img
+                    src="https://dba24.com.ar/wp-content/uploads/2023/10/image-30.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
                 )
               },
               {
@@ -492,11 +491,11 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-blue-600 to-teal-600',
                 icon: (
-                <img
-                src="https://dba24.com.ar/wp-content/uploads/2023/10/image-30.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
+                  <img
+                    src="https://dba24.com.ar/wp-content/uploads/2023/10/image-30.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
                 )
               },
               {
@@ -507,11 +506,11 @@ function App() {
                 level: t.levelExpert,
                 color: 'from-blue-600 to-teal-600',
                 icon: (
-                <img
-                src="https://img.icons8.com/ios_filled/512/FFFFFF/php-logo.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
+                  <img
+                    src="https://img.icons8.com/ios_filled/512/FFFFFF/php-logo.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
                 )
               },
               {
@@ -522,11 +521,11 @@ function App() {
                 level: t.levelIntermediate,
                 color: 'from-teal-500 to-cyan-500',
                 icon: (
-                <img
-                src="https://img.icons8.com/ios_filled/512/FFFFFF/php-logo.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
+                  <img
+                    src="https://img.icons8.com/ios_filled/512/FFFFFF/php-logo.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
                 )
               },
               {
@@ -537,11 +536,11 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-teal-500 to-blue-500',
                 icon: (
-                <img
-                src="https://img.icons8.com/m_sharp/512/FFFFFF/mysql-logo.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
+                  <img
+                    src="https://img.icons8.com/m_sharp/512/FFFFFF/mysql-logo.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
                 )
               },
               {
@@ -552,11 +551,11 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-teal-500 to-blue-500',
                 icon: (
-                <img
-                src="https://img.icons8.com/ios_filled/512/FFFFFF/php-logo.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
+                  <img
+                    src="https://img.icons8.com/ios_filled/512/FFFFFF/php-logo.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
                 )
               },
               {
@@ -567,11 +566,11 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-cyan-500 to-teal-500',
                 icon: (
-                <img
-                src="https://img.icons8.com/ios_filled/512/FFFFFF/javascript.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
+                  <img
+                    src="https://img.icons8.com/ios_filled/512/FFFFFF/javascript.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
                 )
               },
               {
@@ -582,11 +581,11 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-blue-600 to-teal-600',
                 icon: (
-                <img
-                src="https://img.icons8.com/ios_filled/512/FFFFFF/css3.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
+                  <img
+                    src="https://img.icons8.com/ios_filled/512/FFFFFF/css3.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
                 )
               },
               {
@@ -597,11 +596,11 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-blue-600 to-teal-600',
                 icon: (
-                <img
-                src="https://img.icons8.com/ios_filled/512/FFFFFF/html-5.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
+                  <img
+                    src="https://img.icons8.com/ios_filled/512/FFFFFF/html-5.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
                 )
               },
               {
@@ -612,11 +611,11 @@ function App() {
                 level: t.levelExpert,
                 color: 'from-teal-500 to-cyan-500',
                 icon: (
-                <img
-                src="https://aymasesoriasempresariales.com/wp-content/uploads/2023/08/atencion-al-cliente.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
+                  <img
+                    src="https://aymasesoriasempresariales.com/wp-content/uploads/2023/08/atencion-al-cliente.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
                 )
               },
               {
@@ -627,11 +626,11 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-teal-500 to-blue-500',
                 icon: (
-                <img
-                src="https://skillmea.cz/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWxoTXpFMk9UUTJZeTAyWm1JMUxUUTVOMll0WW1GalpTMWtOVFZpWWpsaE56UmpZemNHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--a3a1901580816fd47ce864dc5c1172022dfed63e/html.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
+                  <img
+                    src="https://skillmea.cz/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWxoTXpFMk9UUTJZeTAyWm1JMUxUUTVOMll0WW1GalpTMWtOVFZpWWpsaE56UmpZemNHT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--a3a1901580816fd47ce864dc5c1172022dfed63e/html.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
                 )
               },
               {
@@ -642,11 +641,11 @@ function App() {
                 level: t.levelFundamental,
                 color: 'from-teal-500 to-blue-500',
                 icon: (
-                <img
-                src="https://cdn-icons-png.flaticon.com/512/2587/2587912.png"
-                alt="Language"
-                className="w-8 h-8"
-                />
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/2587/2587912.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
                 )
               }
             ].map((cert, index) => (
@@ -670,12 +669,11 @@ function App() {
                   <p className="text-purple-400 font-medium text-sm">{cert.provider}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400 text-sm">{cert.date}</span>
-                    <span className={`px-2 py-1 bg-slate-800 text-xs rounded-full ${
-                      cert.level === t.levelExpert ? 'text-teal-400' :
-                      cert.level === t.levelIntermediate ? 'text-blue-400' :
-                      cert.level === t.levelFundamental ? 'text-cyan-400' :
-                      'text-teal-400'
-                    }`}>
+                    <span className={`px-2 py-1 bg-slate-800 text-xs rounded-full ${cert.level === t.levelExpert ? 'text-teal-400' :
+                        cert.level === t.levelIntermediate ? 'text-blue-400' :
+                          cert.level === t.levelFundamental ? 'text-cyan-400' :
+                            'text-teal-400'
+                      }`}>
                       {cert.level}
                     </span>
                   </div>
@@ -683,12 +681,11 @@ function App() {
 
                 <div className="flex items-center space-x-2">
                   <div className="flex-1 bg-slate-800 rounded-full h-2">
-                    <div className={`h-2 bg-gradient-to-r ${cert.color} rounded-full transition-all duration-1000 group-hover:w-full ${
-                      cert.level === t.levelExpert ? 'w-full' :
-                      cert.level === t.levelIntermediate ? 'w-4/5' :
-                      cert.level === t.levelFundamental ? 'w-3/4' :
-                      'w-2/3'
-                    }`}></div>
+                    <div className={`h-2 bg-gradient-to-r ${cert.color} rounded-full transition-all duration-1000 group-hover:w-full ${cert.level === t.levelExpert ? 'w-full' :
+                        cert.level === t.levelIntermediate ? 'w-4/5' :
+                          cert.level === t.levelFundamental ? 'w-3/4' :
+                            'w-2/3'
+                      }`}></div>
                   </div>
                   <Award className="text-yellow-500" size={16} />
                 </div>
@@ -715,7 +712,7 @@ function App() {
 
       {/* Portfolio Section */}
       <section id="portfolio" className="py-20">
-      <ProjectWizard />
+        <ProjectWizard />
       </section>
 
       {/* Experience Section */}
@@ -733,7 +730,7 @@ function App() {
           <div className="relative max-w-4xl mx-auto">
             {/* Timeline line - hidden on mobile */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-gradient-to-b from-blue-500 to-teal-500 hidden md:block"></div>
-            
+
             <div className="space-y-12">
               {[
                 {
@@ -777,7 +774,14 @@ function App() {
                       </div>
                       <h3 className="text-lg font-bold mb-2 text-white leading-tight">{exp.position}</h3>
                       <p className="text-gray-300 font-medium mb-3 text-sm">{exp.company}</p>
-                      <p className="text-gray-400 text-sm leading-relaxed">{exp.description}</p>
+                      <ul className="text-gray-400 text-sm leading-relaxed space-y-2">
+                        {exp.description.map((item, itemIndex) => (
+                          <li key={itemIndex} className="flex items-start">
+                            <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
 
@@ -790,8 +794,14 @@ function App() {
                           <span className="text-blue-400 font-semibold">{exp.year}</span>
                         </div>
                         <h3 className="text-xl font-bold mb-2 text-white">{exp.position}</h3>
-                        <p className="text-gray-300 font-medium mb-3">{exp.company}</p>
-                        <p className="text-gray-400">{exp.description}</p>
+                        <ul className="text-gray-400 space-y-2">
+                          {exp.description.map((item, itemIndex) => (
+                            <li key={itemIndex} className="flex items-start">
+                              <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                     {/* Timeline dot - desktop only */}
@@ -854,8 +864,8 @@ function App() {
 
             <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700">
               <form className="space-y-6" action="https://formsubmit.co/8b49e71d469dfc28b279d4f6bfd6d310" method="POST">
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value="https://wilmersaz.github.io/wilmersaz/#contact" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://wilmersaz.github.io/wilmersaz/#contact" />
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">{t.name}</label>
                   <input

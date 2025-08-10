@@ -110,19 +110,19 @@ export interface Translation {
   present: string;
   experienceoccupation1: string;
   experienceCompany1: string;
-  experienceDescription1: string;
+  experienceDescription1: string[];
   experienceoccupation2: string;
   experienceCompany2: string;
-  experienceDescription2: string;
+  experienceDescription2: string[];
   experienceoccupation3: string;
   experienceCompany3: string;
-  experienceDescription3: string;
+  experienceDescription3: string[];
   experienceoccupation4: string;
   experienceCompany4: string;
-  experienceDescription4: string;
+  experienceDescription4: string[];
   experienceoccupation5: string;
   experienceCompany5: string;
-  experienceDescription5: string;
+  experienceDescription5: string[];
 
   // Contact Section
   contactTitle: string;

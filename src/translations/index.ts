@@ -157,36 +157,36 @@ export const translations: Record<"es" | "en", Translation> = {
 
     experienceoccupation1: "Técnico en Desarrollo de Software",
     experienceCompany1: "Salud Ocupacional de los Andes",
-    experienceDescription1: `• Soportar y administrar todas las plataformas y sistemas cuyo código fuente era administrado por la empresa.\n
-  • Preparar y elaborar toda la documentación técnica y de usuario de cada aplicación.`,
+    experienceDescription1: ['Soportar y administrar todas las plataformas y sistemas cuyo código fuente era administrado por la empresa.',
+  'Preparar y elaborar toda la documentación técnica y de usuario de cada aplicación.'],
 
     experienceoccupation2: "Desarrollador de Software Nivel I",
     experienceCompany2: "Misión Temporal",
-    experienceDescription2: `• Prestar, ejecutar y desarrollar oportunamente los requerimientos solicitados por las diferentes empresas del grupo Altum.\n
-• Documentar las necesidades del cliente a especificaciones y requerimientos formales desde el punto de vista como ingeniero de software.`,
+    experienceDescription2: ['Prestar, ejecutar y desarrollar oportunamente los requerimientos solicitados por las diferentes empresas del grupo Altum.',
+  'Documentar las necesidades del cliente a especificaciones y requerimientos formales desde el punto de vista como ingeniero de software.'],
 
     experienceoccupation3: "Desarrollador de Software Nivel II",
     experienceCompany3: "Vise",
-    experienceDescription3: `• Desarrollar, probar e implementar, los requerimientos asignados a cada uno de los proyectos en el lenguaje de programación establecido.\n
-• Diseñar y ejecutar casos de pruebas en cada uno de los proyectos de desarrollo de software asignados por la dirección de desarrollo de software del grupo Altum.\n
-• Aportar nuevas y novedosas iniciativas de tecnologías, patrones, estándares y entornos de desarrollo web.\n
-• Modelar, diseñar y crear bases de datos y sus respectivos objetos, según la necesidad que se requiere en cada proyecto.\n
-• Entregar versionado y documentados el código fuente de los proyectos y sus respectivas bases de datos.`,
+    experienceDescription3: ['Desarrollar, probar e implementar, los requerimientos asignados a cada uno de los proyectos en el lenguaje de programación establecido.',
+  'Diseñar y ejecutar casos de pruebas en cada uno de los proyectos de desarrollo de software asignados por la dirección de desarrollo de software del grupo Altum.',
+  'Aportar nuevas y novedosas iniciativas de tecnologías, patrones, estándares y entornos de desarrollo web.',
+  'Modelar, diseñar y crear bases de datos y sus respectivos objetos, según la necesidad que se requiere en cada proyecto.',
+  'Entregar versionado y documentados el código fuente de los proyectos y sus respectivas bases de datos.'],
 
     experienceoccupation4: "Desarrollador Full Stack",
     experienceCompany4: "Serdan",
-    experienceDescription4: `• Apoyar los procesos de documentación del proyecto, técnica, de usuario y administración de los proyectos de desarrollo.\n
-• Apoyar los procesos de análisis, planeación levantamiento de requerimientos, documentación y cierres de los proyectos de desarrollo de software de las empresas del grupo Altum.\n
-• Prestar apoyo a los distintos usuarios, realizando asesoramiento y capacitaciones.\n
-• Evaluar viabilidad técnica de los desarrollos de las aplicaciones que se han de ejecutar.`,
+    experienceDescription4: ['Apoyar los procesos de documentación del proyecto, técnica, de usuario y administración de los proyectos de desarrollo.',
+  'Apoyar los procesos de análisis, planeación levantamiento de requerimientos, documentación y cierres de los proyectos de desarrollo de software de las empresas del grupo Altum.',
+  'Prestar apoyo a los distintos usuarios, realizando asesoramiento y capacitaciones.',
+  'Evaluar viabilidad técnica de los desarrollos de las aplicaciones que se han de ejecutar.'],
 
     experienceoccupation5: "Ingeniero Desarrollador Senior",
     experienceCompany5: "Corporación Colombiana de Logística - CCL",
-    experienceDescription5: `• Participar en el diseño, desarrollo y mantenimiento de aplicaciones y sistemas, asegurando que cumplan con los estándares de calidad y rendimiento.\n
-• Trabajar en conjunto con las áreas de la compañía para definir requisitos y asegurar que las soluciones técnicas se alineen con las necesidades del negocio.\n
-• Identificar áreas de mejora en los procesos de desarrollo y proponer soluciones para aumentar la eficiencia y la calidad del software.\n
-• Implementar y supervisar pruebas de software para garantizar que las aplicaciones sean robustas y estén libres de errores.\n
-• Crear y mantener documentación clara y concisa sobre el software desarrollado utilizando metodologías ágiles, así como guías para su uso y mantenimiento.`,
+    experienceDescription5: ['Participar en el diseño, desarrollo y mantenimiento de aplicaciones y sistemas, asegurando que cumplan con los estándares de calidad y rendimiento.',
+  'Trabajar en conjunto con las áreas de la compañía para definir requisitos y asegurar que las soluciones técnicas se alineen con las necesidades del negocio.',
+  'Identificar áreas de mejora en los procesos de desarrollo y proponer soluciones para aumentar la eficiencia y la calidad del software.',
+  'Implementar y supervisar pruebas de software para garantizar que las aplicaciones sean robustas y estén libres de errores.',
+  'Crear y mantener documentación clara y concisa sobre el software desarrollado utilizando metodologías ágiles, así como guías para su uso y mantenimiento.'],
     // Contact Section
     contactTitle: "Ponte en Contacto",
     contactSubtitle:
@@ -363,36 +363,35 @@ export const translations: Record<"es" | "en", Translation> = {
     present: "Present",
     experienceoccupation1: "Software Development Technician",
     experienceCompany1: "Salud Ocupacional de los Andes",
-    experienceDescription1: `• Support and manage all platforms and systems whose source code was managed by the company.\n
-  • Prepare and create all technical and user documentation for each application.`,
+    experienceDescription1: ['Support and manage all platforms and systems whose source code was managed by the company.',
+    'Prepare and create all technical and user documentation for each application.'],
 
     experienceoccupation2: "Software Developer Level I",
     experienceCompany2: "Misión Temporal",
-    experienceDescription2: `• Provide, execute, and timely develop the requirements requested by the different companies of the Altum group.\n
-• Document client needs into formal specifications and requirements from the perspective of a software engineer.`,
+    experienceDescription2: ['Provide, execute, and timely develop the requirements requested by the different companies of the Altum group.', 'Document client needs into formal specifications and requirements from the perspective of a software engineer.'],
 
     experienceoccupation3: "Software Developer Level II",
     experienceCompany3: "Vise",
-    experienceDescription3: `• Develop, test, and implement the requirements assigned to each project in the established programming language.\n
-• Design and execute test cases in each of the software development projects assigned by the software development management of the Altum group.\n
-• Contribute new and innovative initiatives in technologies, patterns, standards, and web development environments.\n
-• Model, design, and create databases and their respective objects, according to the needs of each project.\n
-• Deliver versioned and documented source code of the projects and their respective databases.`,
+    experienceDescription3: ['Develop, test, and implement the requirements assigned to each project in the established programming language.',
+    'Design and execute test cases in each of the software development projects assigned by the software development management of the Altum group.',
+    'Contribute new and innovative initiatives in technologies, patterns, standards, and web development environments.',
+    'Model, design, and create databases and their respective objects, according to the needs of each project.',
+    'Deliver versioned and documented source code of the projects and their respective databases.'],
 
     experienceoccupation4: "Full Stack Developer",
     experienceCompany4: "Serdan",
-    experienceDescription4: `• Support the documentation processes of the project, technical, user, and administration of development projects.\n
-• Support the processes of analysis, planning, requirements gathering, documentation, and closure of software development projects for the companies of the Altum group.\n
-• Provide support to different users, offering advice and training.\n
-• Evaluate the technical feasibility of the developments of the applications to be executed.`,
+    experienceDescription4:['Support the documentation processes of the project, technical, user, and administration of development projects.',
+    'Support the processes of analysis, planning, requirements gathering, documentation, and closure of software development projects for the companies of the Altum group.',
+    'Provide support to different users, offering advice and training.',
+    'Evaluate the technical feasibility of the developments of the applications to be executed.'],
 
     experienceoccupation5: "Senior Development Engineer",
     experienceCompany5: "Corporación Colombiana de Logística - CCL",
-    experienceDescription5: `• Participate in the design, development, and maintenance of applications and systems, ensuring they meet quality and performance standards.\n
-• Work together with company departments to define requirements and ensure technical solutions align with business needs.\n
-• Identify areas for improvement in development processes and propose solutions to increase efficiency and software quality.\n
-• Implement and supervise software testing to ensure applications are robust and error-free.\n
-• Create and maintain clear and concise documentation on developed software using agile methodologies, as well as guides for its use and maintenance.`,
+    experienceDescription5: ['Participate in the design, development, and maintenance of applications and systems, ensuring they meet quality and performance standards.',
+    'Work together with company departments to define requirements and ensure technical solutions align with business needs.',
+    'Identify areas for improvement in development processes and propose solutions to increase efficiency and software quality.',
+    'Implement and supervise software testing to ensure applications are robust and error-free.',
+    'Create and maintain clear and concise documentation on developed software using agile methodologies, as well as guides for its use and maintenance.'],
 
     // Contact Section
     contactTitle: "Get In Touch",
