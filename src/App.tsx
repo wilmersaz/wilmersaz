@@ -741,7 +741,7 @@ function App() {
                   description: t.experienceDescription5
                 },
                 {
-                  year: '2024 - 2024',
+                  year: '2022 - 2024',
                   position: t.experienceoccupation4,
                   company: t.experienceCompany4,
                   description: t.experienceDescription4
