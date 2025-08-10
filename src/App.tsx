@@ -59,16 +59,17 @@ function App() {
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'skills', 'education', 'certifications', 'portfolio', 'experience', 'contact'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
-                  className={`capitalize transition-colors hover:text-blue-400 ${
-                    activeSection === item ? 'text-blue-400' : 'text-gray-300'
-                  }`}
-                >
-                  {t[item as keyof typeof t] as string}
-                </button>
+              {['home', 'about', 'skills', 'education', 'certifications', 'portfolio', 'experience', 'contact'].map((item, idx, arr) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item)}
+                className={`capitalize transition-colors hover:text-blue-400 ${
+                activeSection === item ? 'text-blue-400' : 'text-gray-300'
+                } ${idx === arr.length - 1 ? 'mr-[70px]' : ''}`}
+                style={idx === arr.length - 1 ? { marginRight: '70px' } : undefined}
+              >
+                {t[item as keyof typeof t] as string}
+              </button>
               ))}
             </div>
 
@@ -729,9 +730,10 @@ function App() {
             </p>
           </div>
 
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-gradient-to-b from-blue-500 to-teal-500"></div>
-
+          <div className="relative max-w-4xl mx-auto">
+            {/* Timeline line - hidden on mobile */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-px h-full bg-gradient-to-b from-blue-500 to-teal-500 hidden md:block"></div>
+            
             <div className="space-y-12">
               {[
                 {
@@ -765,19 +767,36 @@ function App() {
                   description: t.experienceDescription1
                 }
               ].map((exp, index) => (
-                <div key={index} className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                    <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all">
+                <div key={index} className="relative">
+                  {/* Mobile layout - single column */}
+                  <div className="md:hidden">
+                    <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all mx-4">
                       <div className="flex items-center mb-4">
-                        <Calendar className="text-blue-400 mr-3" size={20} />
-                        <span className="text-blue-400 font-semibold">{exp.year}</span>
+                        <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full mr-3"></div>
+                        <span className="text-blue-400 font-semibold text-sm">{exp.year}</span>
                       </div>
-                      <h3 className="text-xl font-bold mb-2 text-white">{exp.position}</h3>
-                      <p className="text-gray-300 font-medium mb-3">{exp.company}</p>
-                      <p className="text-gray-400">{exp.description}</p>
+                      <h3 className="text-lg font-bold mb-2 text-white leading-tight">{exp.position}</h3>
+                      <p className="text-gray-300 font-medium mb-3 text-sm">{exp.company}</p>
+                      <p className="text-gray-400 text-sm leading-relaxed">{exp.description}</p>
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full"></div>
+
+                  {/* Desktop layout - alternating sides */}
+                  <div className={`hidden md:flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                    <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                      <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700 hover:border-blue-500/50 transition-all">
+                        <div className="flex items-center mb-4">
+                          <Calendar className="text-blue-400 mr-3" size={20} />
+                          <span className="text-blue-400 font-semibold">{exp.year}</span>
+                        </div>
+                        <h3 className="text-xl font-bold mb-2 text-white">{exp.position}</h3>
+                        <p className="text-gray-300 font-medium mb-3">{exp.company}</p>
+                        <p className="text-gray-400">{exp.description}</p>
+                      </div>
+                    </div>
+                    {/* Timeline dot - desktop only */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full"></div>
+                  </div>
                 </div>
               ))}
             </div>
