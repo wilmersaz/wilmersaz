@@ -43,14 +43,19 @@ jobs:
     - name: List dist directory
       run: ls -la dist/
 
+    - name: Move sitemap
+      run: |
+        if [ -f dist/sitemap.xml ]; then
+          mv dist/sitemap.xml ./sitemap.xml
+        else
+          echo "sitemap.xml not found in dist directory"
+        fi
+      continue-on-error: true
+
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
         path: ./dist
-
-    - name: Move sitemap
-      run: mv dist/sitemap.xml ./sitemap.xml
-      if: always()
 
   deploy:
     environment:
