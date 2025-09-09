@@ -48,6 +48,10 @@ jobs:
       with:
         path: ./dist
 
+    - name: Move sitemap
+      run: mv dist/sitemap.xml ./sitemap.xml
+      if: always()
+
   deploy:
     environment:
       name: github-pages
