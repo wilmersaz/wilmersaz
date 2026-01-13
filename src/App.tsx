@@ -923,7 +923,7 @@ function App() {
               </a>
             </div>
             <div className="mt-8 pt-8 border-t border-slate-800 text-sm text-gray-500">
-              © 2025 {t.heroTitle}. {t.allRightsReserved}
+              © {new Date().getFullYear()} {t.heroTitle}. {t.allRightsReserved}
             </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ const LanguageToggle: React.FC = () => {
               <div className="absolute bottom-0 left-0 w-full h-1/4 bg-red-600"></div>
             </>
             ) : (
-            // Bandera de Inglaterra (Union Jack)
+            // Bandera de Estados Unidos
             <>
               {/* Franjas rojas y blancas */}
               {[...Array(7)].map((_, i) => (
