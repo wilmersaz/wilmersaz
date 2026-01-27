@@ -82,8 +82,17 @@ function App() {
               WS
             </div>
 
-            {/* Desktop Menu centrado */}
-            <div className="hidden md:flex space-x-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xs md:text-sm lg:text-base">
+            {/* Botón menú móvil a la izquierda (visible en < 992px) */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="lg:hidden p-2 rounded-md hover:bg-slate-800 transition-colors absolute left-0 ml-16"
+              style={{ zIndex: 10 }}
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+
+            {/* Desktop Menu centrado (visible en >= 992px) */}
+            <div className="hidden lg:flex space-x-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xs md:text-sm lg:text-base">
               {[
                 "home",
                 "about",
@@ -105,20 +114,12 @@ function App() {
                 </button>
               ))}
             </div>
-
-            {/* Botón menú móvil a la derecha */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-md hover:bg-slate-800 transition-colors"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
           </div>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-800">
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-800">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {[
                 "home",
