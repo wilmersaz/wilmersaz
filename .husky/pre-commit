@@ -1,0 +1,150 @@
+#!/bin/sh
+
+# Verificar si estamos en Windows y ejecutar el script batch si es necesario
+if [ "$OS" = "Windows_NT" ] || command -v cmd.exe >/dev/null 2>&1; then
+    cmd.exe /c ".husky/pre-commit.bat"
+    exit $?
+fi
+
+# Script de pre-commit para proyecto React/TypeScript
+# Ejecuta verificaciones de calidad de código antes de cada commit
+
+echo "🚀 Ejecutando verificaciones pre-commit..."
+
+# 1. Auditoría de vulnerabilidades y corrección automática
+echo "🚀 1. Auditoría de vulnerabilidades y corrección automática"
+npm audit --audit-level low --json > audit_check.tmp 2>/dev/null || echo "{}" > audit_check.tmp
+
+# Inicializar contadores de vulnerabilidades
+critical_vuln=0
+high_vuln=0
+moderate_vuln=0
+low_vuln=0
+total_vuln=0
+
+# Extraer contadores de cada nivel de vulnerabilidad
+if [ -s audit_check.tmp ] && grep -q '"vulnerabilities":' audit_check.tmp 2>/dev/null; then
+    critical_vuln=$(node -pe "try { JSON.parse(require('fs').readFileSync('audit_check.tmp', 'utf8')).metadata?.vulnerabilities?.critical || 0 } catch(e) { 0 }")
+    high_vuln=$(node -pe "try { JSON.parse(require('fs').readFileSync('audit_check.tmp', 'utf8')).metadata?.vulnerabilities?.high || 0 } catch(e) { 0 }")
+    moderate_vuln=$(node -pe "try { JSON.parse(require('fs').readFileSync('audit_check.tmp', 'utf8')).metadata?.vulnerabilities?.moderate || 0 } catch(e) { 0 }")
+    low_vuln=$(node -pe "try { JSON.parse(require('fs').readFileSync('audit_check.tmp', 'utf8')).metadata?.vulnerabilities?.low || 0 } catch(e) { 0 }")
+    total_vuln=$((critical_vuln + high_vuln + moderate_vuln + low_vuln))
+fi
+
+# Mostrar resumen de vulnerabilidades encontradas
+if [ "$total_vuln" -gt 0 ]; then
+    echo "🔍 Vulnerabilidades detectadas:"
+    [ "$critical_vuln" -gt 0 ] && echo "  🔴 Críticas: $critical_vuln"
+    [ "$high_vuln" -gt 0 ] && echo "  🟠 Altas: $high_vuln" 
+    [ "$moderate_vuln" -gt 0 ] && echo "  🟡 Moderadas: $moderate_vuln"
+    [ "$low_vuln" -gt 0 ] && echo "  🟢 Bajas: $low_vuln"
+    echo "  📊 Total: $total_vuln vulnerabilidades"
+    
+    echo "🔧 Intentando corregir automáticamente todas las vulnerabilidades..."
+    npm audit fix --force
+    echo "✅ Correcciones aplicadas para todos los niveles."
+else
+    echo "✅ No se detectaron vulnerabilidades."
+fi
+
+# Actualizar el contador global para el resumen final
+vuln_count=$((critical_vuln + high_vuln))  # Solo críticas y altas cuentan como errores críticos
+rm -f audit_check.tmp
+
+# 2. Mostrar dependencias desactualizadas (no bloquea el commit, solo informa)
+echo "🚀 2. Comprobando dependencias desactualizadas:"
+
+# Ejecutar npm outdated y capturar el resultado
+outdated_output=$(npm outdated --color=always 2>/dev/null || true)
+if [ -n "$outdated_output" ]; then
+    # Contar las líneas de dependencias (excluyendo la cabecera)
+    outdated_count=$(echo "$outdated_output" | tail -n +2 | wc -l | tr -d ' \n')
+    outdated_count=${outdated_count:-0}
+    
+    # Mostrar la salida completa con colores
+    echo "$outdated_output"
+    echo "🔔 Total de dependencias desactualizadas: $outdated_count"
+else
+    outdated_count=0
+    echo "✅ No se encontraron dependencias desactualizadas."
+fi
+
+# 3. Comprobación de tipos de TypeScript
+echo "🚀 3. Ejecutando comprobación de tipos de TypeScript..."
+if npm run type-check; then
+    echo "✅ Comprobación de tipos completada sin errores."
+    type_error_count=0
+else
+    echo "🔔 Errores de tipos detectados. Se recomienda corregirlos previamente."
+    type_error_count=1
+fi
+
+# 4. ESLint con autofix
+echo "🚀 4. Ejecutando ESLint con autofix..."
+if npm run lint:fix; then
+    echo "✅ ESLint completado sin errores."
+    error_count=0
+else
+    echo "⚠️  Errores de ESLint detectados, se recomienda corregirlos previamente."
+    error_count=1
+fi
+
+# 5. Build check (verificar que el proyecto compila)
+echo "🚀 5. Verificando que el proyecto compila correctamente..."
+if npm run build; then
+    echo "✅ Proyecto compila correctamente."
+    build_error_count=0
+else
+    echo "🔴 Errores de compilación detectados."
+    build_error_count=1
+fi
+
+# ===================================================
+# 📊 RESUMEN DE COMPROBACIONES PRE-COMMIT
+# ===================================================
+echo ""
+echo "📋 =============== RESUMEN FINAL ==============="
+
+# Inicializar todas las variables de conteo como números válidos
+critical_errors=0
+vuln_count=${vuln_count:-0}
+type_error_count=${type_error_count:-0}
+error_count=${error_count:-0}
+build_error_count=${build_error_count:-0}
+
+# Vulnerabilidades críticas/altas
+if [ "$vuln_count" -gt 0 ]; then
+    echo "🔴 Vulnerabilidades críticas/altas: $vuln_count"
+    critical_errors=$((critical_errors + vuln_count))
+fi
+
+# Errores de tipos TypeScript
+if [ "$type_error_count" -gt 0 ]; then
+    echo "🔴 Errores de tipos TypeScript detectados"
+    critical_errors=$((critical_errors + type_error_count))
+fi
+
+# Errores de ESLint
+if [ "$error_count" -gt 0 ]; then
+    echo "🔴 Errores de ESLint detectados"
+    critical_errors=$((critical_errors + error_count))
+fi
+
+# Errores de compilación
+if [ "$build_error_count" -gt 0 ]; then
+    echo "🔴 Errores de compilación detectados"
+    critical_errors=$((critical_errors + build_error_count))
+fi
+
+# Resumen final
+echo "=============================================="
+if [ "$critical_errors" -eq 0 ]; then
+    echo "✅ ¡TODAS LAS COMPROBACIONES CRÍTICAS PASARON!"
+    echo "🚀 ¡Listo para hacer commit!"
+    exit 0
+else
+    echo "❌ SE REQUIERE ATENCIÓN ANTES DEL COMMIT"
+    echo "Por favor, revisa y corrige los errores listados arriba"
+    echo "=============================================="
+    exit 1
+fi
