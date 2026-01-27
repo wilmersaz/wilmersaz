@@ -1,18 +1,7 @@
-import React, { createContext, useState, useEffect, ReactNode } from "react";
-import { Language, Translation } from "../types/language";
+import React, { useState, useEffect, ReactNode } from "react";
+import { Language } from "../types/language";
 import { translations } from "../translations";
-
-interface LanguageContextType {
-  language: Language;
-  toggleLanguage: () => void;
-  t: Translation;
-  isSpanish: boolean;
-  isEnglish: boolean;
-}
-
-export const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined,
-);
+import { LanguageContext } from "./LanguageContextObject";
 
 interface LanguageProviderProps {
   children: ReactNode;

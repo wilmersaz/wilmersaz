@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 import { useLanguage } from "../hooks/useLanguage";
 
@@ -180,17 +180,17 @@ const ProjectWizard: React.FC = () => {
     },
   ];
 
-  const nextStep = () => {
+  const nextStep = useCallback(() => {
     setCurrentStep((prev) => (prev + 1) % projects.length);
-  };
+  }, [projects.length]);
 
-  const prevStep = () => {
+  const prevStep = useCallback(() => {
     setCurrentStep((prev) => (prev - 1 + projects.length) % projects.length);
-  };
+  }, [projects.length]);
 
-  const goToStep = (step: number) => {
+  const goToStep = useCallback((step: number) => {
     setCurrentStep(step);
-  };
+  }, []);
 
   // Auto-play functionality
   React.useEffect(() => {
