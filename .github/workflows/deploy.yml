@@ -1,4 +1,4 @@
-name: Deploy Vite React App
+name: Deploy Vite React App to GitHub Pages
 
 on:
   push:
@@ -39,6 +39,9 @@ jobs:
 
     - name: Build
       run: npm run build
+
+    - name: Copy sitemap to dist
+      run: cp sitemap.xml dist/ 2>/dev/null || echo "No sitemap.xml found in root"
 
     - name: List dist directory
       run: ls -la dist/
