@@ -143,4 +143,4 @@ export interface Translation {
   allRightsReserved: string;
 }
 
-export type Language = 'es' | 'en';
+export type Language = "es" | "en";
