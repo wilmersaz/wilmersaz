@@ -182,6 +182,7 @@ const ProjectWizard: React.FC = () => {
       const interval = setInterval(nextStep, 4000);
       return () => clearInterval(interval);
     }
+    return undefined;
   }, [isAutoPlay, nextStep]);
 
   const currentProject = projects[currentStep];
