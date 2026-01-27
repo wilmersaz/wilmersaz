@@ -1,6 +1,6 @@
-import React, { createContext, useState, useEffect, ReactNode } from "react";
-import { Language, Translation } from "../types/language";
-import { translations } from "../translations";
+import React, { createContext, useState, useEffect, ReactNode } from 'react';
+import { Language, Translation } from '../types/language';
+import { translations } from '../translations';
 
 interface LanguageContextType {
   language: Language;
@@ -10,32 +10,28 @@ interface LanguageContextType {
   isEnglish: boolean;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined,
-);
+export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 interface LanguageProviderProps {
   children: ReactNode;
 }
 
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({
-  children,
-}) => {
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
   const [language, setLanguage] = useState<Language>(() => {
     // Check if there's a saved language preference
-    const saved = localStorage.getItem("preferred-language");
-    if (saved && (saved === "es" || saved === "en")) {
+    const saved = localStorage.getItem('preferred-language');
+    if (saved && (saved === 'es' || saved === 'en')) {
       return saved;
     }
-
+    
     // Default to Spanish
-    return "es";
+    return 'es';
   });
 
   const toggleLanguage = () => {
-    const newLanguage = language === "es" ? "en" : "es";
+    const newLanguage = language === 'es' ? 'en' : 'es';
     setLanguage(newLanguage);
-    localStorage.setItem("preferred-language", newLanguage);
+    localStorage.setItem('preferred-language', newLanguage);
   };
 
   const t = translations[language];
@@ -49,8 +45,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     language,
     toggleLanguage,
     t,
-    isSpanish: language === "es",
-    isEnglish: language === "en",
+    isSpanish: language === 'es',
+    isEnglish: language === 'en',
   };
 
   return (

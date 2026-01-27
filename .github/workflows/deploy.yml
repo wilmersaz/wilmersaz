@@ -40,11 +40,11 @@ jobs:
     - name: Build
       run: npm run build
 
-    - name: Copy sitemap to dist
-      run: cp sitemap.xml dist/ 2>/dev/null || echo "No sitemap.xml found in root"
-
     - name: List dist directory
       run: ls -la dist/
+
+    - name: Copy sitemap to dist
+      run: cp sitemap.xml dist/ || echo "No sitemap.xml found"
 
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
