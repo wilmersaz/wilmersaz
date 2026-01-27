@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, ExternalLink, Github, Play, Pause } from 'lucide-react';
-import { useLanguage } from '../contexts/LanguageContext';
+import React, { useState, useCallback } from 'react';
+import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
+import { useLanguage } from '../hooks/useLanguage';
 
 interface Project {
   title: string;
@@ -164,9 +164,9 @@ const ProjectWizard: React.FC = () => {
     }
   ];
 
-  const nextStep = () => {
+  const nextStep = useCallback(() => {
     setCurrentStep((prev) => (prev + 1) % projects.length);
-  };
+  }, [projects.length]);
 
   const prevStep = () => {
     setCurrentStep((prev) => (prev - 1 + projects.length) % projects.length);
@@ -182,7 +182,7 @@ const ProjectWizard: React.FC = () => {
       const interval = setInterval(nextStep, 4000);
       return () => clearInterval(interval);
     }
-  }, [isAutoPlay]);
+  }, [isAutoPlay, nextStep]);
 
   const currentProject = projects[currentStep];
 

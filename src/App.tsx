@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, Github, Linkedin, Mail, Phone, MapPin, Code, User, Send, Menu, X, Calendar, Award, Star } from 'lucide-react';
-import { useLanguage } from './contexts/LanguageContext';
+import { useLanguage } from './hooks/useLanguage';
 import LanguageToggle from './components/LanguageToggle';
 import ProjectWizard from './components/ProjectWizard';
 
