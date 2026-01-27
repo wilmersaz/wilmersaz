@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
-import { useLanguage } from '../hooks/useLanguage';
+import React, { useState } from "react";
+import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
+import { useLanguage } from "../hooks/useLanguage";
 
 interface Project {
   title: string;
@@ -21,147 +21,163 @@ const ProjectWizard: React.FC = () => {
     {
       title: t.projectTitle16,
       description: t.projectDescription16,
-      image: 'https://images.stockcake.com/public/f/e/1/fe1c2fbb-4fc9-49b6-9727-82eaaca5d6bd/package-transfer-moment-stockcake.jpg',
-      tech: ['C#', '.Net Core 9', 'Angular', 'PostgreSQL'],
-      color: 'from-blue-500 to-cyan-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/f/e/1/fe1c2fbb-4fc9-49b6-9727-82eaaca5d6bd/package-transfer-moment-stockcake.jpg",
+      tech: ["C#", ".Net Core 9", "Angular", "PostgreSQL"],
+      color: "from-blue-500 to-cyan-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle15,
       description: t.projectDescription15,
-      image: 'https://images.stockcake.com/public/2/4/a/24a4e89f-26bd-4064-9e97-01c58721f532/truck-loading-dock-stockcake.jpg',
-      tech: ['C#', '.Net Core 9', 'Angular', 'PostgreSQL'],
-      color: 'from-cyan-500 to-teal-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/2/4/a/24a4e89f-26bd-4064-9e97-01c58721f532/truck-loading-dock-stockcake.jpg",
+      tech: ["C#", ".Net Core 9", "Angular", "PostgreSQL"],
+      color: "from-cyan-500 to-teal-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle14,
       description: t.projectDescription14,
-      image: 'https://images.stockcake.com/public/a/7/9/a792f68f-df70-4f2d-ba64-5cb2754dfc1a/robot-coding-intensely-stockcake.jpg',
-      tech: ['Python', 'FastAPI', 'Selenium', 'PostgreSQL'],
-      color: 'from-teal-500 to-emerald-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/a/7/9/a792f68f-df70-4f2d-ba64-5cb2754dfc1a/robot-coding-intensely-stockcake.jpg",
+      tech: ["Python", "FastAPI", "Selenium", "PostgreSQL"],
+      color: "from-teal-500 to-emerald-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle13,
       description: t.projectDescription13,
-      image: 'https://images.stockcake.com/public/0/4/7/047a59bb-40fd-4155-aa76-5cc42d118d2d/hiring-sign-displayed-stockcake.jpg',
-      tech: ['PHP', 'Laravel', 'Alpine.js', 'Livewire', 'MySQL'],
-      color: 'from-teal-500 to-cyan-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/0/4/7/047a59bb-40fd-4155-aa76-5cc42d118d2d/hiring-sign-displayed-stockcake.jpg",
+      tech: ["PHP", "Laravel", "Alpine.js", "Livewire", "MySQL"],
+      color: "from-teal-500 to-cyan-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle12,
       description: t.projectDescription12,
-      image: 'https://images.stockcake.com/public/f/e/b/febf23d1-f7b0-4540-9ae1-b7d27ad79ede/cozy-studio-living-stockcake.jpg',
-      tech: ['PHP', 'Laravel', 'Vue.js', 'MySQL'],
-      color: 'from-cyan-500 to-blue-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/f/e/b/febf23d1-f7b0-4540-9ae1-b7d27ad79ede/cozy-studio-living-stockcake.jpg",
+      tech: ["PHP", "Laravel", "Vue.js", "MySQL"],
+      color: "from-cyan-500 to-blue-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle11,
       description: t.projectDescription11,
-      image: 'https://images.stockcake.com/public/4/0/2/402e691b-2358-4dc0-8357-b57dd21ffc4e/innovation-in-action-stockcake.jpg',
-      tech: ['PHP', 'Laravel', 'jQuery', 'MySQL'],
-      color: 'from-blue-500 to-cyan-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/4/0/2/402e691b-2358-4dc0-8357-b57dd21ffc4e/innovation-in-action-stockcake.jpg",
+      tech: ["PHP", "Laravel", "jQuery", "MySQL"],
+      color: "from-blue-500 to-cyan-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle10,
       description: t.projectDescription10,
-      image: 'https://images.stockcake.com/public/b/8/0/b80c8f46-626c-4ae2-a1f4-df1f5dd4fb0e/organized-deadline-planning-stockcake.jpg',
-      tech: ['PHP', 'Laravel', 'Vue.js', 'MySQL'],
-      color: 'from-cyan-500 to-teal-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/b/8/0/b80c8f46-626c-4ae2-a1f4-df1f5dd4fb0e/organized-deadline-planning-stockcake.jpg",
+      tech: ["PHP", "Laravel", "Vue.js", "MySQL"],
+      color: "from-cyan-500 to-teal-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle9,
       description: t.projectDescription9,
-      image: 'https://images.stockcake.com/public/0/d/7/0d749e10-d9de-4b53-8010-60bd7d644ca9/financial-elements-intersect-stockcake.jpg',
-      tech: ['PHP', 'Laravel', 'jQuery', 'MySQL'],
-      color: 'from-teal-500 to-emerald-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/0/d/7/0d749e10-d9de-4b53-8010-60bd7d644ca9/financial-elements-intersect-stockcake.jpg",
+      tech: ["PHP", "Laravel", "jQuery", "MySQL"],
+      color: "from-teal-500 to-emerald-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle8,
       description: t.projectDescription8,
-      image: 'https://images.stockcake.com/public/d/9/3/d9370026-f332-46a5-963c-67836f337ce4/organized-productivity-workspace-stockcake.jpg',
-      tech: ['PHP', 'Laravel', 'jQuery', 'MySQL'],
-      color: 'from-teal-500 to-cyan-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/d/9/3/d9370026-f332-46a5-963c-67836f337ce4/organized-productivity-workspace-stockcake.jpg",
+      tech: ["PHP", "Laravel", "jQuery", "MySQL"],
+      color: "from-teal-500 to-cyan-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle7,
       description: t.projectDescription7,
-      image: 'https://images.stockcake.com/public/e/a/1/ea1e7a0d-f163-4f23-8efd-6568c750991b/digital-meets-traditional-stockcake.jpg',
-      tech: ['PHP', 'Laravel', 'jQuery', 'MySQL'],
-      color: 'from-cyan-500 to-blue-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/e/a/1/ea1e7a0d-f163-4f23-8efd-6568c750991b/digital-meets-traditional-stockcake.jpg",
+      tech: ["PHP", "Laravel", "jQuery", "MySQL"],
+      color: "from-cyan-500 to-blue-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle6,
       description: t.projectDescription6,
-      image: 'https://images.stockcake.com/public/e/2/6/e2625ac6-5467-40fc-a19c-9afedee30c5d/magnetic-data-flow-stockcake.jpg',
-      tech: ['PHP', 'Laravel', 'jQuery', 'MySQL'],
-      color: 'from-blue-500 to-cyan-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/e/2/6/e2625ac6-5467-40fc-a19c-9afedee30c5d/magnetic-data-flow-stockcake.jpg",
+      tech: ["PHP", "Laravel", "jQuery", "MySQL"],
+      color: "from-blue-500 to-cyan-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle5,
       description: t.projectDescription5,
-      image: 'https://images.stockcake.com/public/6/c/9/6c93e907-e2f3-4c99-bf3c-0f6092a9a57f/warehouse-inventory-management-stockcake.jpg',
-      tech: ['PHP', 'Laravel', 'jQuery', 'MySQL'],
-      color: 'from-cyan-500 to-teal-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/6/c/9/6c93e907-e2f3-4c99-bf3c-0f6092a9a57f/warehouse-inventory-management-stockcake.jpg",
+      tech: ["PHP", "Laravel", "jQuery", "MySQL"],
+      color: "from-cyan-500 to-teal-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle4,
       description: t.projectDescription4,
-      image: 'https://images.stockcake.com/public/0/f/b/0fb792b8-f5b7-498c-9219-51bc01d302f4/warehouse-inventory-check-stockcake.jpg',
-      tech: ['PHP', 'Laravel', 'jQuery', 'MySQL'],
-      color: 'from-teal-500 to-emerald-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/0/f/b/0fb792b8-f5b7-498c-9219-51bc01d302f4/warehouse-inventory-check-stockcake.jpg",
+      tech: ["PHP", "Laravel", "jQuery", "MySQL"],
+      color: "from-teal-500 to-emerald-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle3,
       description: t.projectDescription3,
-      image: 'https://images.stockcake.com/public/3/a/8/3a842923-b2bc-44b9-a6c2-aba85a294633/productivity-enhanced-workspace-stockcake.jpg',
-      tech: ['PHP', 'Laravel', 'JavaScript', 'MySQL'],
-      color: 'from-teal-500 to-cyan-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/3/a/8/3a842923-b2bc-44b9-a6c2-aba85a294633/productivity-enhanced-workspace-stockcake.jpg",
+      tech: ["PHP", "Laravel", "JavaScript", "MySQL"],
+      color: "from-teal-500 to-cyan-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle2,
       description: t.projectDescription2,
-      image: 'https://images.stockcake.com/public/e/f/8/ef8a90d4-8714-4e69-9725-9e7de3789d3a/analyzing-brain-data-stockcake.jpg',
-      tech: ['PHP', 'Laravel', 'jQuery', 'MySQL'],
-      color: 'from-cyan-500 to-blue-500',
-      demoUrl: '#',
-      githubUrl: '#'
+      image:
+        "https://images.stockcake.com/public/e/f/8/ef8a90d4-8714-4e69-9725-9e7de3789d3a/analyzing-brain-data-stockcake.jpg",
+      tech: ["PHP", "Laravel", "jQuery", "MySQL"],
+      color: "from-cyan-500 to-blue-500",
+      demoUrl: "#",
+      githubUrl: "#",
     },
     {
       title: t.projectTitle1,
       description: t.projectDescription1,
-      image: 'https://images.stockcake.com/public/7/0/c/70cb0fe7-0696-4211-9e15-7627cd350427/medical-team-meeting-stockcake.jpg',
-      tech: ['PHP', 'Laravel', 'jQuery', 'MySQL'],
-      color: 'from-blue-500 to-cyan-500',
-      demoUrl: '#',
-      githubUrl: '#'
-    }
+      image:
+        "https://images.stockcake.com/public/7/0/c/70cb0fe7-0696-4211-9e15-7627cd350427/medical-team-meeting-stockcake.jpg",
+      tech: ["PHP", "Laravel", "jQuery", "MySQL"],
+      color: "from-blue-500 to-cyan-500",
+      demoUrl: "#",
+      githubUrl: "#",
+    },
   ];
 
   const nextStep = () => {
@@ -211,8 +227,8 @@ const ProjectWizard: React.FC = () => {
               onClick={() => goToStep(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentStep
-                  ? 'bg-gradient-to-r from-blue-500 to-teal-500 scale-125'
-                  : 'bg-slate-600 hover:bg-slate-500'
+                  ? "bg-gradient-to-r from-blue-500 to-teal-500 scale-125"
+                  : "bg-slate-600 hover:bg-slate-500"
               }`}
             />
           ))}
@@ -266,7 +282,9 @@ const ProjectWizard: React.FC = () => {
 
               {/* Technologies */}
               <div className="space-y-3">
-                <h4 className="text-xl font-semibold text-white">{t.technologies}:</h4>
+                <h4 className="text-xl font-semibold text-white">
+                  {t.technologies}:
+                </h4>
                 <div className="flex flex-wrap gap-2">
                   {currentProject.tech.map((tech, index) => (
                     <span
