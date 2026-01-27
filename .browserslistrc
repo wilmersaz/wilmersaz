@@ -1,0 +1,14 @@
+# Browserslist configuration
+# Configuración de navegadores soportados para herramientas como Autoprefixer y Babel
+
+# Producción: navegadores con al menos 0.5% de uso global
+# o las últimas 2 versiones de cada navegador
+# y no navegadores muertos
+> 0.5%
+last 2 versions
+not dead
+
+# Desarrollo: incluir navegadores actuales para testing
+last 1 chrome version
+last 1 firefox version
+last 1 safari version

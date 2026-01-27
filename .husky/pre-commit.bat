@@ -1,6 +1,15 @@
 @echo off
 echo 🚀 Ejecutando verificaciones pre-commit...
 
+:: 0. Actualización de Browserslist
+echo 🚀 0. Verificando y actualizando Browserslist...
+npx update-browserslist-db@latest --silent 2>nul
+if %ERRORLEVEL% equ 0 (
+    echo ✅ Browserslist actualizado correctamente.
+) else (
+    echo ⚠️  Advertencia: No se pudo actualizar Browserslist automáticamente.
+)
+
 :: 1. Auditoría de vulnerabilidades
 echo 🚀 1. Auditoría de vulnerabilidades y corrección automática
 npm audit --audit-level low --json > audit_check.tmp 2>nul

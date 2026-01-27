@@ -13,7 +13,8 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "prepare": "husky"
+    "prepare": "husky",
+    "update-browserslist": "npx update-browserslist-db@latest"
   },
   "dependencies": {
     "gh-pages": "^6.3.0",
