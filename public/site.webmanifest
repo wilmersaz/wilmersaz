@@ -7,7 +7,7 @@
   "description": "Desarrollador Full Stack e Innovador Digital",
   "icons": [
     {
-      "src": "src/images/favicon.png",
+      "src": "/favicon.png",
       "sizes": "192x192",
       "type": "image/png"
     }
