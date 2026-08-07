@@ -205,7 +205,7 @@ const ProjectWizard: React.FC = () => {
   // Auto-play functionality
   React.useEffect(() => {
     if (isAutoPlay) {
-      const interval = setInterval(nextStep, 4000);
+      const interval = setInterval(nextStep, 10000);
       return () => clearInterval(interval);
     }
   }, [isAutoPlay, nextStep]);

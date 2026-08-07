@@ -33,10 +33,7 @@ const Header: React.FC<HeaderProps> = ({
   useEffect(() => {
     if (!isMenuOpen) return;
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(event.target as Node)
-      ) {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsMenuOpen(false);
       }
     };
@@ -92,7 +89,10 @@ const Header: React.FC<HeaderProps> = ({
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div ref={menuRef} className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-800">
+        <div
+          ref={menuRef}
+          className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-800"
+        >
           <div className="px-2 pt-2 pb-3 space-y-1">
             {[
               "home",

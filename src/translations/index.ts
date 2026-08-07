@@ -91,7 +91,7 @@ export const translations: Record<"es" | "en", Translation> = {
     projectTitle17: "CCL-FORMS",
     projectDescription17:
       "Sistema para la creación y gestión de formularios en línea, permitiendo diseñar cuestionarios personalizados con diversos tipos de preguntas como texto, opción múltiple, matrices y más. Ofrece recolección de datos en tiempo real, análisis automático de respuestas, exportación de resultados en Excel, control de acceso y colaboración multiusuario, ideal para evaluaciones, sondeos, registros informativos y procesos de captura de datos empresariales.",
-   
+
     // 16. Acondicionamiento de Productos (Maquilas)
     projectTitle16: "Acondicionamiento de Productos (Maquilas)",
     projectDescription16:
@@ -328,7 +328,7 @@ export const translations: Record<"es" | "en", Translation> = {
     // 17. CCL-FORMS
     projectTitle17: "CCL-FORMS",
     projectDescription17:
-      "System for creating and managing online forms and surveys, allowing the design of personalized questionnaires with various question types such as text, multiple choice, matrices, and more. Offers real-time data collection, automatic response analysis, result export to multiple formats, access control, and multi-user collaboration, ideal for assessments, polls, information recording, and corporate data capture processes.", 
+      "System for creating and managing online forms and surveys, allowing the design of personalized questionnaires with various question types such as text, multiple choice, matrices, and more. Offers real-time data collection, automatic response analysis, result export to multiple formats, access control, and multi-user collaboration, ideal for assessments, polls, information recording, and corporate data capture processes.",
 
     // 16. Acondicionamiento de Productos (Maquilas)
     projectTitle16: "Product Conditioning (Maquilas)",
