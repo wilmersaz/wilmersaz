@@ -429,6 +429,21 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
+                title: "ENGLISH DOES WORK - LEVEL 6",
+                provider: "SENA",
+                date: "2026",
+                type: t.certification,
+                level: t.levelFundamental,
+                color: "from-blue-600 to-teal-600",
+                icon: (
+                  <img
+                    src="https://img.icons8.com/ios7/200/FFFFFF/google-translate.png"
+                    alt="Language"
+                    className="w-8 h-8"
+                  />
+                ),
+              },
+              {
                 title: "ENGLISH DOES WORK - LEVEL 5",
                 provider: "SENA",
                 date: "2024",

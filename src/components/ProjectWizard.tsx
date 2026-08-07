@@ -19,6 +19,16 @@ const ProjectWizard: React.FC = () => {
 
   const projects: Project[] = [
     {
+      title: t.projectTitle17,
+      description: t.projectDescription17,
+      image:
+        "https://images.stockcake.com/public/b/5/a/b5a9779a-56f4-4967-ab85-98857aa99814_large/developers-at-work-stockcake.jpg",
+      tech: ["PHP", "Laravel", "Vue", "PostgreSQL"],
+      color: "from-cyan-500 to-blue-500",
+      demoUrl: "#",
+      githubUrl: "#",
+    },
+    {
       title: t.projectTitle16,
       description: t.projectDescription16,
       image:
@@ -311,14 +321,14 @@ const ProjectWizard: React.FC = () => {
         {/* Navigation Arrows */}
         <button
           onClick={prevStep}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-slate-900/80 backdrop-blur-sm text-white p-3 rounded-full hover:bg-slate-800 transition-all hover:scale-110 border border-slate-700"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-slate-900/10 backdrop-blur-sm text-white p-1 rounded-full hover:bg-slate-800 transition-all hover:scale-110 border border-slate-700"
         >
           <ChevronLeft size={24} />
         </button>
 
         <button
           onClick={nextStep}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-slate-900/80 backdrop-blur-sm text-white p-3 rounded-full hover:bg-slate-800 transition-all hover:scale-110 border border-slate-700"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-slate-900/10 backdrop-blur-sm text-white p-1 rounded-full hover:bg-slate-800/10 transition-all hover:scale-110 border border-slate-700"
         >
           <ChevronRight size={24} />
         </button>

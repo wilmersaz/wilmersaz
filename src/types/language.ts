@@ -103,6 +103,8 @@ export interface Translation {
   projectDescription15: string;
   projectTitle16: string;
   projectDescription16: string;
+  projectTitle17: string;
+  projectDescription17: string;
 
   // Experience Section
   experienceTitle: string;
