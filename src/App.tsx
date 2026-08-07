@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   ChevronDown,
   Github,
@@ -24,6 +24,29 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [, setScrollY] = useState(0);
   const [activeSection, setActiveSection] = useState("home");
+
+  const formRef = useRef<HTMLFormElement>(null);
+  const [formValues, setFormValues] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const isFormValid = 
+    formValues.name.trim() !== "" &&
+    formValues.email.trim() !== "" &&
+    formValues.message.trim() !== "";
+
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!isFormValid || !formRef.current) {
+      return;
+    }
+    
+    // Form is valid - proceed with submission
+    formRef.current.submit();
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -1082,6 +1105,7 @@ function App() {
                 className="space-y-6"
                 action="https://formsubmit.co/8b49e71d469dfc28b279d4f6bfd6d310"
                 method="POST"
+                onSubmit={handleFormSubmit}
               >
                 <input type="hidden" name="_captcha" value="false" />
                 <input
@@ -1095,9 +1119,10 @@ function App() {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:outline-none focus:border-blue-500 text-white"
+                    className={`w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:outline-none ${isFormValid ? "focus:border-blue-500" : "focus:border-gray-600"} text-white`}
                     name="name"
                     placeholder={t.yourName}
+                    onChange={(e) => setFormValues(prev => ({ ...prev, name: e.target.value }))}
                   />
                 </div>
                 <div>
@@ -1106,9 +1131,10 @@ function App() {
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:outline-none focus:border-blue-500 text-white"
+                    className={`w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:outline-none ${isFormValid ? "focus:border-blue-500" : "focus:border-gray-600"} text-white`}
                     name="email"
                     placeholder={t.yourEmail}
+                    onChange={(e) => setFormValues(prev => ({ ...prev, email: e.target.value }))}
                   />
                 </div>
                 <div>
@@ -1117,20 +1143,26 @@ function App() {
                   </label>
                   <textarea
                     rows={4}
-                    className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:outline-none focus:border-blue-500 text-white"
+                    className={`w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:outline-none ${isFormValid ? "focus:border-blue-500" : "focus:border-gray-600"} text-white`}
                     name="message"
                     placeholder={t.tellMeAboutProject}
+                    onChange={(e) => setFormValues(prev => ({ ...prev, message: e.target.value }))}
                   ></textarea>
                 </div>
                 <button
-                  className="w-full bg-gradient-to-r from-blue-600 to-teal-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-teal-700 transition-all transform hover:scale-105 flex items-center justify-center space-x-2"
+                  className={`w-full py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 transition-all transform ${
+                    isFormValid 
+                      ? "bg-gradient-to-r from-blue-600 to-teal-600 text-white hover:from-blue-700 hover:to-teal-700 hover:scale-105 shadow-lg cursor-pointer" 
+                      : "bg-slate-700 text-gray-400 cursor-not-allowed"
+                  }`}
                   type="submit"
+                  disabled={!isFormValid}
                 >
                   <span>{t.sendMessage}</span>
                   <Send size={20} />
                 </button>
               </form>
-            </div>
+              </div>
           </div>
         </div>
       </section>
