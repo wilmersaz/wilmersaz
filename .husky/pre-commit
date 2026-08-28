@@ -3,6 +3,9 @@
 # Script de pre-commit para proyecto React/TypeScript
 # Ejecuta verificaciones de calidad de código antes de cada commit
 
+# Asegurar que node esté en el PATH
+export PATH="/c/Program Files/nodejs:$PATH"
+
 echo "🚀 Ejecutando verificaciones pre-commit..."
 
 # 0. Actualización de Browserslist
