@@ -25,7 +25,7 @@ export const translations: Record<"es" | "en", Translation> = {
       "Desarrollador apasionado con un ojo agudo para el diseño y una comprensión profunda de las tecnologías web modernas",
     myJourney: "Mi Trayectoria",
     myJourneyText:
-      "Con más de 7 años de experiencia en desarrollo web, me especializo en crear aplicaciones escalables y fáciles de usar que resuelven problemas del mundo real. Mi pasión radica en cerrar la brecha entre la excelencia técnica y la experiencia de usuario excepcional.",
+      "Con más de 8 años de experiencia en desarrollo web, me especializo en crear aplicaciones escalables y fáciles de usar que resuelven problemas del mundo real. Mi pasión radica en cerrar la brecha entre la excelencia técnica y la experiencia de usuario excepcional.",
     philosophy: "Filosofía",
     philosophyText:
       "Creo en el código limpio, el aprendizaje continuo y la entrega de soluciones que superen las expectativas. Cada proyecto es una oportunidad para superar límites y crear algo verdaderamente extraordinario.",
@@ -262,7 +262,7 @@ export const translations: Record<"es" | "en", Translation> = {
       "Passionate developer with a keen eye for design and a deep understanding of modern web technologies",
     myJourney: "My Journey",
     myJourneyText:
-      "With over 7 years of experience in web development, I specialize in creating scalable, user-friendly applications that solve real-world problems. My passion lies in bridging the gap between technical excellence and exceptional user experience.",
+      "With over 8 years of experience in web development, I specialize in creating scalable, user-friendly applications that solve real-world problems. My passion lies in bridging the gap between technical excellence and exceptional user experience.",
     philosophy: "Philosophy",
     philosophyText:
       "I believe in clean code, continuous learning, and delivering solutions that exceed expectations. Every project is an opportunity to push boundaries and create something truly remarkable.",
