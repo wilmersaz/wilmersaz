@@ -1,0 +1,64 @@
+/* ============================================================
+   CURSORES PERSONALIZADOS (set aleatorio por carga)
+   ============================================================
+   Los archivos viven en `public/cursors` y se sirven en
+   `/wilmersaz/cursors/...` (base del proyecto: vite `base`).
+
+   SETS DISPONIBLES (cada uno trae "_cursor" = normal y
+   "_pointer" = enlaces/botones):
+     [A] cold_gradient
+     [B] starter-3d-perspective-octopus-color
+     [C] starter-motherboard
+     [D] starter-northern-lights
+     [E] starter-space
+
+   ELECCIÓN DEL SET: la realiza un script inline en `index.html`
+   que, en cada carga/refresh, elige un set al azar y lo aplica
+   sobrescribiendo las variables CSS --cursor-default y
+   --cursor-pointer en el <html> (estilo en línea).
+   Los valores definidos aquí SOLO son el fallback por defecto
+   en caso de que JavaScript no se ejecute.
+
+   Hotspot: los PNG son 32x32, anclaje en el centro -> 16 16.
+   ============================================================ */
+
+:root {
+  /* ---- Set por defecto (fallback): cold_gradient ---- */
+  --cursor-default: url("/wilmersaz/cursors/cold_gradient_cursor.png") 16 16, auto;
+  --cursor-pointer: url("/wilmersaz/cursors/cold_gradient_pointer.png") 16 16, pointer;
+  /* --------------------------------------------------- */
+}
+
+/* Cursor por defecto en todo el documento */
+html,
+body,
+* {
+  cursor: var(--cursor-default);
+}
+
+/* Cursor de "mano" en elementos interactivos */
+a,
+button,
+[role="button"],
+input[type="button"],
+input[type="submit"],
+input[type="file"],
+select,
+label[for],
+summary,
+details[open] summary,
+svg,
+.cursor-pointer {
+  cursor: var(--cursor-pointer);
+}
+
+/* Cursor de texto en campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="password"],
+input[type="url"],
+textarea {
+  cursor: text;
+}

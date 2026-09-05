@@ -105,23 +105,29 @@ export interface Translation {
   projectDescription16: string;
   projectTitle17: string;
   projectDescription17: string;
+  projectTitle18: string;
+  projectDescription18: string;
 
   // Experience Section
   experienceTitle: string;
   experienceSubtitle: string;
-  present: string;
+  experienceoccupationtime1: string;
   experienceoccupation1: string;
   experienceCompany1: string;
   experienceDescription1: string[];
+  experienceoccupationtime2: string;
   experienceoccupation2: string;
   experienceCompany2: string;
   experienceDescription2: string[];
+  experienceoccupationtime3: string;
   experienceoccupation3: string;
   experienceCompany3: string;
   experienceDescription3: string[];
+  experienceoccupationtime4: string;
   experienceoccupation4: string;
   experienceCompany4: string;
   experienceDescription4: string[];
+  experienceoccupationtime5: string;
   experienceoccupation5: string;
   experienceCompany5: string;
   experienceDescription5: string[];

@@ -88,29 +88,35 @@ export const translations: Record<"es" | "en", Translation> = {
     resumeWizard: "Reanudar Presentación",
 
     // 17. CCL-FORMS
-    projectTitle17: "CCL-FORMS",
-    projectDescription17:
+    projectTitle18: "CCL-FORMS",
+    projectDescription18:
       "Sistema para la creación y gestión de formularios en línea, permitiendo diseñar cuestionarios personalizados con diversos tipos de preguntas como texto, opción múltiple, matrices y más. Ofrece recolección de datos en tiempo real, análisis automático de respuestas, exportación de resultados en Excel, control de acceso y colaboración multiusuario, ideal para evaluaciones, sondeos, registros informativos y procesos de captura de datos empresariales.",
 
     // 16. Acondicionamiento de Productos (Maquilas)
-    projectTitle16: "Acondicionamiento de Productos (Maquilas)",
-    projectDescription16:
+    projectTitle17: "Acondicionamiento de Productos (Maquilas)",
+    projectDescription17:
       "plataforma web optimiza el proceso de acondicionamiento de productos con una interfaz intuitiva facilitando la gestión de inventarios, asigna tareas a operarios y automatiza órdenes de producción. Ofrece seguimiento en tiempo real, asegurando trazabilidad y cumplimiento de estándares de calidad.",
 
     // 15. TMS
-    projectTitle15: "Sistema de Gestión de Transporte (TMS)",
-    projectDescription15:
+    projectTitle16: "Sistema de Gestión de Transporte (TMS)",
+    projectDescription16:
       "Software que facilita la planificación de rutas, asignación de transportistas y seguimiento de entregas en tiempo real mejorando la eficiencia del transporte. Ofrece la toma de decisiones basadas en datos, ofreciendo un servicio más rápido y rentable, gracias a su capacidad para generar rutas óptimas y asegurar trazabilidad completa del transporte.",
 
     // 14. Estudios de Seguridad Mediante RPA
-    projectTitle14: "Estudios de Seguridad Mediante RPA",
-    projectDescription14:
+    projectTitle15: "Estudios de Seguridad Mediante RPA",
+    projectDescription15:
       "Sistema de Automatización Robótica de Procesos (RPA) para realizar consultas automatizadas en múltiples entidades gubernamentales y organismos de control, con el fin de verificar información de personas naturales y jurídicas de manera eficiente y centralizada.",
 
     // 13. Talent4U
-    projectTitle13: "Talent4U",
-    projectDescription13:
+    projectTitle14: "Talent4U",
+    projectDescription14:
       "Plataforma web de empleo dinámica destinada principalmente para la selección y contratación de personal, que permite a las empresas publicar ofertas de trabajo y a los candidatos postularse de manera eficiente. Incluye funcionalidades avanzadas como filtrado de candidatos, gestión de entrevistas y seguimiento del proceso de selección.",
+
+    // 13. SIGAD-SOA
+    projectTitle13: "SIGAD-SOA",
+    projectDescription13:
+      "Plataforma integral para la gestión de solicitudes de servicios de una IPS de salud Ocupacional. Permite crear, consultar y gestionar solicitudes, así como administrar los servicios requeridos para los pacientes. Permite cargue de documentos clínicos, conceptos médicos, historias clínicas ocupacionales, recomendaciones y paraclínicos, optimizando los procesos administrativos y asistenciales de la IPS.",
+
 
     // 12. Alquilapp
     projectTitle12: "Alquilapp",
@@ -175,8 +181,8 @@ export const translations: Record<"es" | "en", Translation> = {
     // Experience Section
     experienceTitle: "Experiencia",
     experienceSubtitle: "Mi trayectoria profesional y logros clave",
-    present: "Presente",
 
+    experienceoccupationtime1: "Julio 2014 - Febrero 2020",
     experienceoccupation1: "Técnico en Desarrollo de Software",
     experienceCompany1: "Salud Ocupacional de los Andes",
     experienceDescription1: [
@@ -184,6 +190,7 @@ export const translations: Record<"es" | "en", Translation> = {
       "Preparar y elaborar toda la documentación técnica y de usuario de cada aplicación.",
     ],
 
+    experienceoccupationtime2: "Febrero 2020 - Octubre 2021",
     experienceoccupation2: "Desarrollador de Software Nivel I",
     experienceCompany2: "Misión Temporal",
     experienceDescription2: [
@@ -191,6 +198,7 @@ export const translations: Record<"es" | "en", Translation> = {
       "Documentar las necesidades del cliente a especificaciones y requerimientos formales desde el punto de vista como ingeniero de software.",
     ],
 
+    experienceoccupationtime3: "Octubre 2021 - Agosto 2022",
     experienceoccupation3: "Desarrollador de Software Nivel II",
     experienceCompany3: "Vise",
     experienceDescription3: [
@@ -201,6 +209,7 @@ export const translations: Record<"es" | "en", Translation> = {
       "Entregar versionado y documentados el código fuente de los proyectos y sus respectivas bases de datos.",
     ],
 
+    experienceoccupationtime4: "Agosto 2022 - Junio 2024",
     experienceoccupation4: "Desarrollador Full Stack",
     experienceCompany4: "Serdan",
     experienceDescription4: [
@@ -210,6 +219,7 @@ export const translations: Record<"es" | "en", Translation> = {
       "Evaluar viabilidad técnica de los desarrollos de las aplicaciones que se han de ejecutar.",
     ],
 
+    experienceoccupationtime5: "Junio 2024 - Actual",
     experienceoccupation5: "Ingeniero Desarrollador Senior",
     experienceCompany5: "Corporación Colombiana de Logística - CCL",
     experienceDescription5: [
@@ -326,29 +336,34 @@ export const translations: Record<"es" | "en", Translation> = {
     resumeWizard: "Resume Presentation",
 
     // 17. CCL-FORMS
-    projectTitle17: "CCL-FORMS",
-    projectDescription17:
+    projectTitle18: "CCL-FORMS",
+    projectDescription18:
       "System for creating and managing online forms and surveys, allowing the design of personalized questionnaires with various question types such as text, multiple choice, matrices, and more. Offers real-time data collection, automatic response analysis, result export to multiple formats, access control, and multi-user collaboration, ideal for assessments, polls, information recording, and corporate data capture processes.",
 
     // 16. Acondicionamiento de Productos (Maquilas)
-    projectTitle16: "Product Conditioning (Maquilas)",
-    projectDescription16:
+    projectTitle17: "Product Conditioning (Maquilas)",
+    projectDescription17:
       "Web platform optimizes the product conditioning process with an intuitive interface, facilitating inventory management, assigning tasks to operators, and automating production orders. It offers real-time tracking, ensuring traceability and compliance with quality standards.",
 
     // 15. TMS
-    projectTitle15: "Transport Management System (TMS)",
-    projectDescription15:
+    projectTitle16: "Transport Management System (TMS)",
+    projectDescription16:
       "Software that facilitates route planning, carrier assignment, and real-time delivery tracking, improving transportation efficiency. It enables data-driven decision making, offering faster and more cost-effective service, thanks to its ability to generate optimal routes and ensure complete transportation traceability.",
 
     // 14. RPA Safety Studies
-    projectTitle14: "Safety Studies via RPA",
-    projectDescription14:
+    projectTitle15: "Safety Studies via RPA",
+    projectDescription15:
       "Robotic Process Automation (RPA) system to perform automated queries in multiple government entities and control agencies, in order to efficiently and centrally verify information of individuals and companies.",
 
     // 13. Talent4U
-    projectTitle13: "Talent4U",
-    projectDescription13:
+    projectTitle14: "Talent4U",
+    projectDescription14:
       "Dynamic web employment platform mainly aimed at personnel selection and hiring, allowing companies to post job offers and candidates to apply efficiently. Includes advanced features such as candidate filtering, interview management, and selection process tracking.",
+
+    // 13. SIGAD-SOA
+    projectTitle13: "SIGAD-SOA",
+    projectDescription13:
+      "Comprehensive platform for managing service requests for an Occupational Health Institution (IPS). It enables users to create, consult, and manage requests, as well as administer the services required for patients. The platform also allows the uploading of clinical documents, medical assessments, occupational medical records, recommendations, and paraclinical test results, streamlining the IPS’s administrative and healthcare processes.",
 
     // 12. Alquilapp
     projectTitle12: "Alquilapp",
@@ -413,7 +428,7 @@ export const translations: Record<"es" | "en", Translation> = {
     // Experience Section
     experienceTitle: "Experience",
     experienceSubtitle: "My professional journey and key achievements",
-    present: "Present",
+    experienceoccupationtime1: "July 2014 - February 2020",
     experienceoccupation1: "Software Development Technician",
     experienceCompany1: "Salud Ocupacional de los Andes",
     experienceDescription1: [
@@ -421,6 +436,7 @@ export const translations: Record<"es" | "en", Translation> = {
       "Prepare and create all technical and user documentation for each application.",
     ],
 
+    experienceoccupationtime2: "February 2020 - October 2021",
     experienceoccupation2: "Software Developer Level I",
     experienceCompany2: "Misión Temporal",
     experienceDescription2: [
@@ -428,6 +444,7 @@ export const translations: Record<"es" | "en", Translation> = {
       "Document client needs into formal specifications and requirements from the perspective of a software engineer.",
     ],
 
+    experienceoccupationtime3: "October 2021 - August 2022",
     experienceoccupation3: "Software Developer Level II",
     experienceCompany3: "Vise",
     experienceDescription3: [
@@ -438,6 +455,7 @@ export const translations: Record<"es" | "en", Translation> = {
       "Deliver versioned and documented source code of the projects and their respective databases.",
     ],
 
+    experienceoccupationtime4: "August 2022 - June 2024",
     experienceoccupation4: "Full Stack Developer",
     experienceCompany4: "Serdan",
     experienceDescription4: [
@@ -447,6 +465,7 @@ export const translations: Record<"es" | "en", Translation> = {
       "Evaluate the technical feasibility of the developments of the applications to be executed.",
     ],
 
+    experienceoccupationtime5: "June 2024 - Present",
     experienceoccupation5: "Senior Development Engineer",
     experienceCompany5: "Corporación Colombiana de Logística - CCL",
     experienceDescription5: [

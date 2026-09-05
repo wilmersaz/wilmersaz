@@ -38,6 +38,7 @@
     <style>
       body {
         visibility: hidden;
+        cursor: var(--cursor-default) !important;
       }
       .js-enabled {
         visibility: visible;
@@ -45,7 +46,38 @@
     </style>
     
     <script>
-      document.documentElement.className += ' js-enabled';
+      (function () {
+        // Juego de cursores ALEATORIO en cada carga/refresh de la página.
+        // Cada set tiene dos archivos en public/cursors:
+        //   "...-cursor.png"  -> cursor normal
+        //   "...-pointer.png" -> cursor de enlaces/botones
+        var sets = [
+          "starter-space",
+          "starter-3d-perspective-octopus-color",
+          "starter-northern-lights",
+          "cold-gradient",
+          "starter-motherboard"
+        ];
+        var set  = sets[Math.floor(Math.random() * sets.length)];
+        var base = "/wilmersaz/cursors/" + set;
+        var root = document.documentElement;
+
+        // Aplicar el set elegido a las variables CSS que consume src/cursors.css
+        root.style.setProperty("--cursor-default", "url('" + base + "-cursor.png') 16 16, auto");
+        root.style.setProperty("--cursor-pointer", "url('" + base + "-pointer.png') 16 16, pointer");
+
+        // Precargar las dos imágenes del set elegido
+        ["-cursor.png", "-pointer.png"].forEach(function (suffix) {
+          var link = document.createElement("link");
+          link.rel  = "preload";
+          link.as   = "image";
+          link.href = base + suffix;
+          document.head.appendChild(link);
+        });
+
+        // Mostrar el contenido una vez la configuración está lista (evita FOUC)
+        root.className += " js-enabled";
+      })();
     </script>
   </head>
   <body class="js-enabled">

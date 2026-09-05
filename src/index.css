@@ -16,6 +16,7 @@ body {
   color: #ffffff;
   background-color: #0f172a;
 }
+  /* Cursor personalizado: gestionado desde `src/cursors.css` */
 
 html {
   scroll-behavior: smooth;

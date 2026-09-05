@@ -19,8 +19,8 @@ const ProjectWizard: React.FC = () => {
 
   const projects: Project[] = [
     {
-      title: t.projectTitle17,
-      description: t.projectDescription17,
+      title: t.projectTitle18,
+      description: t.projectDescription18,
       image:
         "https://images.stockcake.com/public/b/5/a/b5a9779a-56f4-4967-ab85-98857aa99814_large/developers-at-work-stockcake.jpg",
       tech: ["PHP", "Laravel", "Vue", "PostgreSQL"],
@@ -29,8 +29,8 @@ const ProjectWizard: React.FC = () => {
       githubUrl: "#",
     },
     {
-      title: t.projectTitle16,
-      description: t.projectDescription16,
+      title: t.projectTitle17,
+      description: t.projectDescription17,
       image:
         "https://images.stockcake.com/public/f/e/1/fe1c2fbb-4fc9-49b6-9727-82eaaca5d6bd/package-transfer-moment-stockcake.jpg",
       tech: ["C#", ".Net Core 9", "Angular", "PostgreSQL"],
@@ -39,8 +39,8 @@ const ProjectWizard: React.FC = () => {
       githubUrl: "#",
     },
     {
-      title: t.projectTitle15,
-      description: t.projectDescription15,
+      title: t.projectTitle16,
+      description: t.projectDescription16,
       image:
         "https://images.stockcake.com/public/2/4/a/24a4e89f-26bd-4064-9e97-01c58721f532/truck-loading-dock-stockcake.jpg",
       tech: ["C#", ".Net Core 9", "Angular", "PostgreSQL"],
@@ -49,8 +49,8 @@ const ProjectWizard: React.FC = () => {
       githubUrl: "#",
     },
     {
-      title: t.projectTitle14,
-      description: t.projectDescription14,
+      title: t.projectTitle15,
+      description: t.projectDescription15,
       image:
         "https://images.stockcake.com/public/a/7/9/a792f68f-df70-4f2d-ba64-5cb2754dfc1a/robot-coding-intensely-stockcake.jpg",
       tech: ["Python", "FastAPI", "Selenium", "PostgreSQL"],
@@ -59,11 +59,21 @@ const ProjectWizard: React.FC = () => {
       githubUrl: "#",
     },
     {
-      title: t.projectTitle13,
-      description: t.projectDescription13,
+      title: t.projectTitle14,
+      description: t.projectDescription14,
       image:
         "https://images.stockcake.com/public/0/4/7/047a59bb-40fd-4155-aa76-5cc42d118d2d/hiring-sign-displayed-stockcake.jpg",
       tech: ["PHP", "Laravel", "Alpine.js", "Livewire", "MySQL"],
+      color: "from-teal-500 to-cyan-500",
+      demoUrl: "#",
+      githubUrl: "#",
+    },
+    {
+      title: t.projectTitle13,
+      description: t.projectDescription13,
+      image:
+        "https://images.stockcake.com/public/7/5/7/757c82b9-4167-4a74-92e6-a94088072d53/stethoscope-in-hand-stockcake.jpg",
+      tech: ["PHP", "Laravel", "MySQL"],
       color: "from-teal-500 to-cyan-500",
       demoUrl: "#",
       githubUrl: "#",
@@ -286,7 +296,7 @@ const ProjectWizard: React.FC = () => {
               </h3>
 
               {/* Description */}
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-gray-300 text-lg leading-relaxed text-justify">
                 {currentProject.description}
               </p>
 
