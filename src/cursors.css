@@ -22,12 +22,12 @@
    Hotspot: los PNG son 32x32, anclaje en el centro -> 16 16.
    ============================================================ */
 
-:root {
+/* :root { */
   /* ---- Set por defecto (fallback): cold_gradient ---- */
-  --cursor-default: url("/wilmersaz/cursors/starter-motherboard-cursor.png") 16 16, auto;
-  --cursor-pointer: url("/wilmersaz/cursors/starter-motherboard-pointer.png") 16 16, pointer;
+  /* --cursor-default: url("/wilmersaz/cursors/starter-motherboard-cursor.png") 16 16, auto;
+  --cursor-pointer: url("/wilmersaz/cursors/starter-motherboard-pointer.png") 16 16, pointer; */
   /* --------------------------------------------------- */
-}
+/* } */
 
 /* Cursor por defecto en todo el documento */
 html,
