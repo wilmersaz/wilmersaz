@@ -117,7 +117,6 @@ export const translations: Record<"es" | "en", Translation> = {
     projectDescription13:
       "Plataforma integral para la gestión de solicitudes de servicios de una IPS de salud Ocupacional. Permite crear, consultar y gestionar solicitudes, así como administrar los servicios requeridos para los pacientes. Permite cargue de documentos clínicos, conceptos médicos, historias clínicas ocupacionales, recomendaciones y paraclínicos, optimizando los procesos administrativos y asistenciales de la IPS.",
 
-
     // 12. Alquilapp
     projectTitle12: "Alquilapp",
     projectDescription12:

@@ -24,8 +24,8 @@
 
 :root {
   /* ---- Set por defecto (fallback): cold_gradient ---- */
-  --cursor-default: url("/wilmersaz/cursors/cold_gradient_cursor.png") 16 16, auto;
-  --cursor-pointer: url("/wilmersaz/cursors/cold_gradient_pointer.png") 16 16, pointer;
+  --cursor-default: url("/wilmersaz/cursors/cold-gradient-cursor.png") 16 16, auto;
+  --cursor-pointer: url("/wilmersaz/cursors/cold-gradient-pointer.png") 16 16, pointer;
   /* --------------------------------------------------- */
 }
 
