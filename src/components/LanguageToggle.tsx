@@ -8,8 +8,8 @@ const LanguageToggle: React.FC = () => {
     <button
       onClick={toggleLanguage}
       className="fixed top-4 right-4 z-[60] bg-slate-900/90 backdrop-blur-md border border-slate-700 rounded-full p-3 hover:bg-slate-800/90 transition-all hover:scale-110 shadow-lg"
-      aria-label={`Switch to ${language === "es" ? "English" : "Spanish"}`}
-      title={`Switch to ${language === "es" ? "English" : "Spanish"}`}
+      aria-label={`Cambiar a ${language === "es" ? "Cambiar a Inglés" : "Switch to Spanish"}`}
+      title={`${language === "es" ? "Cambiar a Inglés" : "Switch to Spanish"}`}
     >
       <div className="flex items-center space-x-2">
         <div className="w-6 h-4 relative overflow-hidden rounded-sm border border-gray-400">
