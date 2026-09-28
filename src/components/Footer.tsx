@@ -90,7 +90,7 @@ const Footer: React.FC<FooterProps> = ({ t }) => (
             <GithubIcon />
           </a>
           <a
-            href="https://www.linkedin.com/in/wilmersanchez/"
+            href="https://www.linkedin.com/in/wilmersaz/"
             target="_blank"
             className="text-gray-400 hover:text-teal-400 transition-colors"
             rel="noopener noreferrer"

@@ -1238,7 +1238,7 @@ function App() {
                     <GithubIcon />
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/wilmersanchez/"
+                    href="https://www.linkedin.com/in/wilmersaz/"
                     target="_blank"
                     className="p-3 bg-slate-800 rounded-full hover:bg-cyan-600 transition-colors"
                   >
