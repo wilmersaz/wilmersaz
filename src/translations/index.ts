@@ -271,7 +271,7 @@ export const translations: Record<"es" | "en", Translation> = {
       "Passionate developer with a keen eye for design and a deep understanding of modern web technologies",
     myJourney: "My Journey",
     myJourneyText:
-      "With over 8 years of experience in web development, I specialize in creating scalable, user-friendly applications that solve real-world problems. My passion lies in bridging the gap between technical excellence and exceptional user experience.",
+      "With over 9 years of experience in web development, I specialize in creating scalable, user-friendly applications that solve real-world problems. My passion lies in bridging the gap between technical excellence and exceptional user experience.",
     philosophy: "Philosophy",
     philosophyText:
       "I believe in clean code, continuous learning, and delivering solutions that exceed expectations. Every project is an opportunity to push boundaries and create something truly remarkable.",

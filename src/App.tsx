@@ -390,7 +390,7 @@ function App() {
                   "Hoppscotch",
                   "MarkDown",
                   "Advanced Excel",
-                  "Google Workspace"
+                  "Google Workspace",
                 ],
                 color: "from-teal-500 to-cyan-500",
               },
