@@ -25,7 +25,7 @@ export const translations: Record<"es" | "en", Translation> = {
       "Desarrollador apasionado con un ojo agudo para el diseño y una comprensión profunda de las tecnologías web modernas",
     myJourney: "Mi Trayectoria",
     myJourneyText:
-      "Con más de 8 años de experiencia en desarrollo web, me especializo en crear aplicaciones escalables y fáciles de usar que resuelven problemas del mundo real. Mi pasión radica en cerrar la brecha entre la excelencia técnica y la experiencia de usuario excepcional.",
+      "Con más de 9 años de experiencia en desarrollo web, me especializo en crear aplicaciones escalables y fáciles de usar que resuelven problemas del mundo real. Mi pasión radica en cerrar la brecha entre la excelencia técnica y la experiencia de usuario excepcional.",
     philosophy: "Filosofía",
     philosophyText:
       "Creo en el código limpio, el aprendizaje continuo y la entrega de soluciones que superen las expectativas. Cada proyecto es una oportunidad para superar límites y crear algo verdaderamente extraordinario.",
